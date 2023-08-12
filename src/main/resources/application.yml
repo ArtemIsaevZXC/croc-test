@@ -7,6 +7,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
+    generate-ddl: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
