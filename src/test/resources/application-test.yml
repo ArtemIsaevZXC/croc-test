@@ -1,5 +1,5 @@
 spring:
+  datasource:
+    url: jdbc:tc:postgresql:15:///bonjour-db
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  liquibase:
-    change-log: classpath:/db/changelog-test.xml

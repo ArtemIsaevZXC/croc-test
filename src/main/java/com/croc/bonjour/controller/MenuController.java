@@ -1,10 +1,10 @@
 package com.croc.bonjour.controller;
 
-import com.croc.bonjour.models.MenuItem;
+import com.croc.bonjour.dto.MenuDto;
 import com.croc.bonjour.service.MenuService;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/menu")
@@ -20,36 +20,10 @@ public class MenuController {
      * @return
      */
     @GetMapping
-    public List<MenuItem> getMenu() {
-        return menuService.getMenu();
+    public MenuDto getMenu() {
+        MenuDto menuDto = new MenuDto();
+        menuDto.setItems(menuService.getMenu());
+        return menuDto;
     }
 
-    /**
-     * Удаленные позиции в меню.
-     * @return
-     */
-    @GetMapping("/deleted")
-    public List<MenuItem> getDeletedMenuItems() {
-        return menuService.getDeletedMenuItems();
-    }
-
-    /**
-     * Создать позицию в меню.
-     * @param menuItem
-     * @return
-     */
-    @PostMapping("/create")
-    public MenuItem createMenuItem(@RequestBody MenuItem menuItem) {
-        return menuService.createMenuItem(menuItem);
-    }
-
-    /**
-     * Удалить позицию из меню
-     * @param id
-     * @return
-     */
-    @PostMapping("/delete/{id}")
-    public MenuItem deleteMenuItem(@PathVariable Long id) {
-        return menuService.deleteMenuItem(id);
-    }
 }

@@ -1,8 +1,8 @@
 package com.croc.bonjour.service;
 
-import com.croc.bonjour.models.MenuItem;
-import com.croc.bonjour.models.Order;
-import com.croc.bonjour.models.OrderItem;
+import com.croc.bonjour.domain.MenuItem;
+import com.croc.bonjour.domain.Order;
+import com.croc.bonjour.domain.OrderItem;
 import com.croc.bonjour.repository.MenuItemRepository;
 import com.croc.bonjour.repository.OrderRepository;
 import org.springframework.stereotype.Service;

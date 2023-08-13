@@ -1,4 +1,4 @@
-package com.croc.bonjour.models;
+package com.croc.bonjour.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

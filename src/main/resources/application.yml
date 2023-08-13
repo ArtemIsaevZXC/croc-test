@@ -10,3 +10,5 @@ spring:
     generate-ddl: false
     hibernate:
       ddl-auto: validate
+  liquibase:
+    change-log: classpath:/db/changelog.xml

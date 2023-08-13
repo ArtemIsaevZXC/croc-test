@@ -1,7 +1,7 @@
 package com.croc.bonjour.controller;
 
-import com.croc.bonjour.models.Order;
-import com.croc.bonjour.models.OrderItem;
+import com.croc.bonjour.domain.Order;
+import com.croc.bonjour.domain.OrderItem;
 import com.croc.bonjour.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 

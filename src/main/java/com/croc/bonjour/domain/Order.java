@@ -1,4 +1,4 @@
-package com.croc.bonjour.models;
+package com.croc.bonjour.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -37,7 +37,7 @@ public class Order {
      * <p>
      * Заказ один, но позиций в нём много.
      */
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
 
